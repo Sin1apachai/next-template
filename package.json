@@ -1,18 +1,24 @@
 {
-	"scripts": {
-		"dev": "next dev --turbopack",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint ."
-	},
-	"dependencies": {
-		"husky": "^9.1.7",
-		"next": "^15.0.3",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
-	},
-	"devDependencies": {
-		"eslint": "^9",
-		"eslint-config-next": "15.0.3"
-	}
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint ."
+    },
+    "dependencies": {
+        "husky": "^9.1.7",
+        "next": "^15.0.3",
+        "prettier": "^3.4.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "22.10.0",
+        "@types/react": "18.3.12",
+        "eslint": "^9",
+        "eslint-config-next": "15.0.3"
+    },
+    "lint-staged": {
+        "*.{js,ts,jsx,tsx,json,css,scss,md}": "prettier --write"
+    }
 }
