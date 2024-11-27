@@ -1,0 +1,1 @@
+echo "Husky: Checking code format during pre-commit using lint"
