@@ -6,10 +6,19 @@ type attrProps = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function InputField({ id, label, type, value, onChange }: attrProps) {
+export default function InputField({
+    id,
+    label,
+    type,
+    value,
+    onChange,
+}: attrProps) {
     return (
         <div className="mb-4">
-            <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+            <label
+                htmlFor={id}
+                className="block text-sm font-medium text-gray-700"
+            >
                 {label}
             </label>
             <input

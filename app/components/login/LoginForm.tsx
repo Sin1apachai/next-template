@@ -1,6 +1,6 @@
 import { useRouter } from 'next/navigation';
 import { useState, FormEvent } from 'react';
-import { verifyUserLogin } from "@/app/lib/data";
+import { verifyUserLogin } from '@/app/lib/data';
 
 import InputField from '@/app/components/InputField';
 import ErrorMessage from '@/app/components/ErrorMessage';
@@ -27,7 +27,10 @@ export default function LoginForm() {
     };
 
     return (
-        <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md w-full max-w-sm">
+        <form
+            onSubmit={handleLogin}
+            className="bg-white p-6 rounded shadow-md w-full max-w-sm"
+        >
             <h1 className="text-2xl font-bold mb-4">Login</h1>
             {error && <ErrorMessage message={error} />}
             <InputField
