@@ -1,4 +1,4 @@
-import TopNavbar from '@/app/components/menubar/navbar';
+import TopNavbar from '@/app/components/menubar/Navbar';
 
 export default function Page() {
     return (

@@ -20,9 +20,16 @@
         ],
         "baseUrl": ".",
         "paths": {
-          "@/*": ["./*"]
+            "@/*": ["./*"]
         }
     },
-    "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "tailwind.config.ะห", "tailwind.config.ะห"],
+    "include": [
+        "next-env.d.ts",
+        ".next/types/**/*.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "tailwind.config.ะห",
+        "tailwind.config.ะห"
+    ],
     "exclude": ["node_modules"]
 }

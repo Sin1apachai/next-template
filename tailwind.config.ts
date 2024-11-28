@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
     content: [
@@ -9,9 +9,9 @@ const config: Config = {
     theme: {
         extend: {
             screens: {
-                'phone': '480px',
-                'ipad': '768px',
-                'pc': '1024px',
+                phone: '480px',
+                ipad: '768px',
+                pc: '1024px',
             },
         },
     },
@@ -19,4 +19,4 @@ const config: Config = {
     darkMode: 'class',
 };
 
-export default config
+export default config;
