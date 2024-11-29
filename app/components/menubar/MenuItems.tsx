@@ -1,5 +1,7 @@
+
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LazySubmenu = React.lazy(() => import('./SubMenu'));
@@ -44,9 +46,11 @@ export default function MenuItems({ menuItems }) {
                             <React.Suspense
                                 fallback={
                                     <div className="flex justify-center items-center p-4">
-                                        <img
+                                        <Image
                                             src="/spin.svg"
                                             alt="Loading..."
+                                            width={8}
+                                            height={8}
                                             className="w-8 h-8 animate-spin"
                                         />
                                     </div>
