@@ -1,25 +1,30 @@
-import { useRouter } from 'next/navigation';
 import { useState, FormEvent } from 'react';
-import { verifyUserLogin } from '@/app/lib/data';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 import InputField from '@/app/components/InputField';
 import ErrorMessage from '@/app/components/ErrorMessage';
 import SubmitButton from '@/app/components/SubmitButton';
 
 export default function LoginForm() {
-    const router = useRouter();
-    const [email, setEmail] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState<string>('');
+    const router = useRouter();
 
     const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            const isAuthenticated = await verifyUserLogin(email, password);
-            if (isAuthenticated) {
-                router.push('/');
-            } else {
+            const result = await signIn('credentials', {
+                redirect: false,
+                email,
+                password,
+            });
+
+            if (result.error) {
                 setError('Invalid credentials');
+            } else {
+                router.push('/web/profile');
             }
         } catch (err) {
             setError('Something went wrong');

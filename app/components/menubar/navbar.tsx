@@ -62,11 +62,11 @@ export default function TopNavbar() {
                         </div>
                         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                             <div className="flex shrink-0 items-center">
-                                <Image
+                                {/* <Image
                                     className="h-8 w-auto"
                                     src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
                                     alt="Your Company"
-                                />
+                                /> */}
                             </div>
                             <div className="hidden sm:ml-6 sm:block">
                                 <div className="flex space-x-4">
@@ -139,11 +139,11 @@ export default function TopNavbar() {
                                         <span className="sr-only">
                                             Open user menu
                                         </span>
-                                        <Image
+                                        {/* <Image
                                             className="size-8 rounded-full"
                                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                             alt=""
-                                        />
+                                        /> */}
                                     </button>
                                 </div>
 
