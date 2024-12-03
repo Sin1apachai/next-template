@@ -15,8 +15,10 @@ export default function SignOut({ sessions }) {
                                 className="text-pink-300 w-6 h-6"
                             />
                             <Link
-                                href='#'
-                                onClick={() => signOut({ callbackUrl: '/web/login' })}
+                                href="#"
+                                onClick={() =>
+                                    signOut({ callbackUrl: '/web/login' })
+                                }
                                 className="text-black font-medium"
                             >
                                 {'SignOut'}

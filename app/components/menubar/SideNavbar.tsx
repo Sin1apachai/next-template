@@ -83,10 +83,10 @@ export default function SideNavbar() {
 
                 {/* Settings */}
                 <div className="mt-auto border-t border-gray-300">
-                <MenuItems menuItems={settingsMenu} />
+                    <MenuItems menuItems={settingsMenu} />
                 </div>
                 {/* SignOut */}
-                <SignOut sessions={session}/>
+                <SignOut sessions={session} />
             </aside>
         </div>
     );

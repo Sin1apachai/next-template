@@ -21,7 +21,12 @@ export const authOptions = {
             async authorize(
                 credentials: Record<string, string> | undefined,
                 req
-            ): Promise<{ id: string; name: string; email: string; role: string } | null> {
+            ): Promise<{
+                id: string;
+                name: string;
+                email: string;
+                role: string;
+            } | null> {
                 if (!credentials) return null;
                 const user = await prisma.resUsers.findUnique({
                     where: { email: credentials.email },

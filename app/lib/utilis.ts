@@ -1,9 +1,7 @@
-
 export function returnIsLogin(session) {
-    if (session){
-      return true;
+    if (session) {
+        return true;
+    } else {
+        return false;
     }
-    else {
-      return false;
-    }
-  }
+}
