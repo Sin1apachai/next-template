@@ -24,7 +24,7 @@ export default function LoginForm() {
             if (result.error) {
                 setError('Invalid credentials');
             } else {
-                router.push('/web/profile');
+                router.push('/');
             }
         } catch (err) {
             setError('Something went wrong');

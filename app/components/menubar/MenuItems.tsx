@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LazySubmenu = React.lazy(() => import('./SubMenu'));
 
 export default function MenuItems({ menuItems }) {
+    const pathName = usePathname();
     const [openMenu, setOpenMenu] = React.useState(null);
 
     const toggleMenu = (index) => {
@@ -27,7 +29,7 @@ export default function MenuItems({ menuItems }) {
                                     className="text-pink-300 w-6 h-6"
                                 />
                                 <Link
-                                    href={item.link}
+                                    href={pathName}
                                     className="text-black font-medium"
                                 >
                                     {item.label}

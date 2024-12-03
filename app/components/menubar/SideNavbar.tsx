@@ -1,8 +1,8 @@
 'use client';
 
 import MenuItems from '@/app/components/menubar/MenuItems';
-import SettingsMenu from '@/app/components/menubar/settings/SettingsMenu';
-import LogoMenu from '@/app/components/menubar/logo/LogoMenu';
+import LogoMenu from '@/app/components/menubar/logo/Logo';
+import SignOut from '@/app/components/menubar/signout/SignOut';
 
 import {
     faHome,
@@ -11,7 +11,11 @@ import {
     faChartBar,
     faTable,
     faEdit,
+    faUsers,
 } from '@fortawesome/free-solid-svg-icons';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 const menuItems = [
     {
@@ -37,9 +41,37 @@ const menuItems = [
         ],
     },
 ];
+const settingsMenu = [
+    {
+        label: 'Settings',
+        link: '/web/settings',
+        icon: faCog,
+        submenu: [
+            {
+                label: 'User Management',
+                link: '/web/users',
+                icon: faUsers,
+            },
+            {
+                label: 'Profile',
+                link: '/web/profile',
+                icon: faUser,
+            },
+        ],
+    },
+];
 const company = 'My Company';
 
 export default function SideNavbar() {
+    const { data: session, status } = useSession();
+    // const [isLoading, setIsLoading] = useState(true);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (status === 'unauthenticated') {
+            router.push('/');
+        }
+    }, [status, router]);
     // phone:bg-green-500 ipad:bg-blue-500 pc:bg-yellow-500
     return (
         <div className="flex min-h-screen bg-white-500">
@@ -49,12 +81,13 @@ export default function SideNavbar() {
                 {/* Menu Dynamic */}
                 <MenuItems menuItems={menuItems} />
 
-                {/* Settings Menu */}
+                {/* Settings */}
                 <div className="mt-auto border-t border-gray-300">
-                    <SettingsMenu />
+                <MenuItems menuItems={settingsMenu} />
                 </div>
+                {/* SignOut */}
+                <SignOut sessions={session}/>
             </aside>
-            <h1>Hello from the Web Page in App Directory!</h1>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function LogoMenu({ company }) {
+export default function Logo({ company }) {
     return (
         <div className="p-4 flex items-center justify-start border-b border-gray-200">
             <Image
