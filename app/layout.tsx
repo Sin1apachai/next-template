@@ -1,11 +1,5 @@
-import '@/app/components/styles/globals.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import { Sarabun } from 'next/font/google';
 import { getServerSession } from 'next-auth';
-import SessionProvider from './components/SessionProvider';
-
-config.autoAddCss = false;
 
 const sarabun = Sarabun({
     subsets: ['thai', 'latin'],
@@ -26,7 +20,7 @@ export default async function Layout({
     return (
         <html lang="en">
             <body className={sarabun.className}>
-                <SessionProvider session={session}>{children}</SessionProvider>
+                <div>{children}</div>
             </body>
         </html>
     );
