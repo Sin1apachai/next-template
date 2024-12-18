@@ -6,15 +6,25 @@
         "lint": "next lint ."
     },
     "dependencies": {
+        "@nextui-org/button": "^2.2.7",
+        "@nextui-org/react": "^2.6.8",
+        "@nextui-org/system": "^2.4.4",
+        "@nextui-org/theme": "^2.4.3",
+        "@nextui-org/use-theme": "^2.1.1",
+        "@tailwindcss/postcss7-compat": "^2.2.17",
+        "autoprefixer": "^10.4.20",
         "bcrypt": "^5.1.1",
         "drizzle-orm": "^0.37.0",
+        "framer-motion": "^11.14.4",
         "husky": "^9.1.7",
         "next": "^15.0.3",
         "next-auth": "^4.24.10",
         "pg": "^8.13.1",
+        "postcss": "^8.4.49",
         "prettier": "^3.4.1",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "tailwindcss": "^3.4.16",
         "zod": "^3.23.8"
     },
     "devDependencies": {

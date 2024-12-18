@@ -1,8 +1,10 @@
 
+import {SwitchTheme} from '@/components/SwitchTheme'
+
 export default function Page() {
-    return (
-        <main>
-            <div>Hello World</div>
-        </main>
-    );
+  return (
+    <div>
+      <SwitchTheme></SwitchTheme>
+    </div>
+  )
 }
